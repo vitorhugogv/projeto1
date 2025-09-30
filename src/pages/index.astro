@@ -4,47 +4,154 @@ import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
 ---
+---
+import "../styles/global.css";
+---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<Header />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/content/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EstrategiaPrev - Planejamento Previdenciário</title>
+  </head>
+  <body class="bg-gray-50 text-gray-800">
+    <!-- Header -->
+    <header class="bg-white shadow-md sticky top-0 z-50">
+      <div class="max-w-6xl mx-auto flex justify-between items-center p-4">
+        <h1 class="text-2xl font-bold text-indigo-600">EstrategiaPrev</h1>
+        <nav class="space-x-6 hidden md:block">
+          <a href="#servicos" class="hover:text-indigo-600">Serviços</a>
+          <a href="#sobre" class="hover:text-indigo-600">Sobre Nós</a>
+          <a href="#blog" class="hover:text-indigo-600">Blog</a>
+          <a href="#contato" class="hover:text-indigo-600">Contato</a>
+        </nav>
+        <a
+          href="#contato"
+          class="bg-indigo-600 text-white px-4 py-2 rounded-lg ml-4 hover:bg-indigo-700"
+        >
+          Agende sua consulta
+        </a>
+      </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="bg-gradient-to-r from-indigo-600 to-indigo-800 text-white py-20">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">Planeje hoje, garanta seu amanhã</h2>
+        <p class="text-lg mb-6">
+          A EstrategiaPrev ajuda você a entender seus direitos e conquistar a
+          aposentadoria de forma segura e estratégica.
+        </p>
+        <a
+          href="#servicos"
+          class="bg-white text-indigo-700 font-semibold px-6 py-3 rounded-lg hover:bg-gray-100"
+        >
+          Conheça nossos serviços
+        </a>
+      </div>
+    </section>
+
+    <!-- Serviços -->
+    <section id="servicos" class="max-w-6xl mx-auto py-16 px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Nossos Serviços</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-md rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold mb-3">Cálculo de Aposentadoria</h4>
+          <p class="text-gray-600">
+            Simulações personalizadas para identificar o melhor momento para se
+            aposentar.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold mb-3">Revisão de Benefícios</h4>
+          <p class="text-gray-600">
+            Analisamos seu benefício para identificar valores incorretos e
+            solicitar revisões.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6 text-center">
+          <h4 class="text-xl font-semibold mb-3">Consultoria Estratégica</h4>
+          <p class="text-gray-600">
+            Orientação completa para planejar sua aposentadoria com segurança e
+            eficiência.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Sobre nós -->
+    <section id="sobre" class="bg-gray-100 py-16">
+      <div
+        class="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-10 items-center"
+      >
+        <div>
+          <h3 class="text-3xl font-bold mb-4">Quem somos</h3>
+          <p class="text-gray-700 mb-4">
+            A EstrategiaPrev nasceu com o propósito de auxiliar segurados do
+            INSS e servidores públicos a entenderem seus direitos
+            previdenciários de forma simples e confiável.
+          </p>
+          <p class="text-gray-700">
+            Nosso compromisso é garantir que cada cliente tenha clareza sobre
+            suas possibilidades de aposentadoria e benefícios, sempre com
+            orientação estratégica e especializada.
+          </p>
+        </div>
+        <img
+          src="https://via.placeholder.com/500x300"
+          alt="Equipe EstrategiaPrev"
+          class="rounded-xl shadow-md"
+        />
+      </div>
+    </section>
+
+    <!-- Blog -->
+    <section id="blog" class="max-w-6xl mx-auto py-16 px-6">
+      <h3 class="text-3xl font-bold text-center mb-12">Últimos Artigos</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-3">Revisão da Vida Toda</h4>
+          <p class="text-gray-600">
+            Entenda quem tem direito e como funciona essa revisão de
+            aposentadoria.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-3">Aposentadoria Especial</h4>
+          <p class="text-gray-600">
+            Saiba quais profissões têm direito e como comprovar a atividade
+            especial.
+          </p>
+        </div>
+        <div class="bg-white shadow-md rounded-xl p-6">
+          <h4 class="text-xl font-semibold mb-3">Planejamento Previdenciário</h4>
+          <p class="text-gray-600">
+            Como se preparar desde cedo para garantir um futuro tranquilo.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contato -->
+    <section id="contato" class="bg-indigo-600 text-white py-16">
+      <div class="max-w-4xl mx-auto px-6 text-center">
+        <h3 class="text-3xl font-bold mb-6">Entre em contato</h3>
+        <p class="mb-6">
+          Precisa de ajuda com sua aposentadoria ou benefício? Fale com nossa
+          equipe especializada.
+        </p>
+        <a
+          href="mailto:contato@estrategiaprev.com.br"
+          class="bg-white text-indigo-700 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100"
+        >
+          Enviar e-mail
+        </a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 text-center py-6">
+      <p>&copy; 2025 EstrategiaPrev. Todos os direitos reservados.</p>
+    </footer>
+  </body>
 </html>
